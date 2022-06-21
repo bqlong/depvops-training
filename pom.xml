@@ -29,6 +29,7 @@
 		</dependency>
 	</dependencies>
 
+
 	<build>
 		<plugins>
 			<plugin>
@@ -38,5 +39,20 @@
 		</plugins>
 		<finalName>devops-integration</finalName>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Optional URL to server. Default value is http://localhost:9000 -->
+				<sonar.host.url>
+					http://localhost:9000
+				</sonar.host.url>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
